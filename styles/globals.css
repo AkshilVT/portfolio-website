@@ -3,25 +3,72 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
+@layer base {
   html,
   body {
     padding: 0;
-    margin: 0;cursor: none;
+    margin: 0;
+    cursor: none;
+    font-family: "Poppins";
   }
   a {
     color: inherit;
     text-decoration: none;
   }
-  
+  h6 {
+    font-size: 72px;
+    background: linear-gradient(
+      131deg,
+      #9400d3,
+      #4b0082,
+      #0000ff,
+      #00ff00,
+      #c1c11e,
+      #ff7f00,
+      #ff0000
+    );
+    background-size: 1200% 1200%;
+
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  h5 {
+    position: relative;
+    height: 40px;
+    top: 0;
+    animation: move 6s infinite 1s;
+  }
   * {
     box-sizing: border-box;
   }
 }
-@layer components{
-  .nav-link{
-    @apply text-xl text-white font-extralight cursor-none hover:border-b duration-200 transition-transform p-2;
-    font-family: 'Poppins', cursive;
+@keyframes move {
+  0% {
+    top: 0px;
+  }
+
+  20% {
+    top: -45px;
+  }
+
+  40% {
+    top: -85px;
+  }
+
+  60% {
+    top: -125px;
+  }
+
+  /* 80% {
+    top: -165px;
+  } */
+}
+@layer components {
+  .nav-link {
+    @apply text-xl text-black font-light max-w-[150px] px-4 py-2 cursor-none border-none text-center;
   }
 }
 /* Tailwind -------------------------------------------- */
@@ -29,11 +76,17 @@
 .cursor {
   width: 20px;
   height: 20px;
-  background-color: white;
+  /* background-color: white; */
+  background: linear-gradient(131deg, #e710c6, #e32340, #22750d, #1e10e7);
+  background-size: 1200% 1200%;
+
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
   border-radius: 50%;
   position: absolute;
   pointer-events: none;
-  z-index:50;
+  z-index: 50;
   mix-blend-mode: exclusion;
 }
 
@@ -53,18 +106,42 @@
 }
 
 .expand {
-  animation: cursorAnim .5s forwards;
+  animation: cursorAnim 0.5s forwards;
 }
 
-.clickable{
+.clickable {
   /* transition-duration: 50ms; */
   transform: scale(2);
 }
 /* Background -------------------------------------------------------------------- */
 .css-selector {
-  background: linear-gradient(131deg, #111a21, #36454f, #391285, #040348, #36454f, #111a21);
+  background: linear-gradient(
+    131deg,
+    #111a21,
+    #36454f,
+    #391285,
+    #040348,
+    #36454f,
+    #111a21
+  );
   background-size: 1200% 1200%;
 
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+}
+.light-gradient {
+  background: linear-gradient(
+    131deg,
+    #9400d3,
+    #4b0082,
+    #0000ff,
+    #00ff00,
+    #c1c11e,
+    #ff7f00,
+    #ff0000
+  );
+  background-size: 1200% 1200%;
   -webkit-animation: AnimationName 30s ease infinite;
   -moz-animation: AnimationName 30s ease infinite;
   animation: AnimationName 30s ease infinite;
@@ -72,42 +149,42 @@
 
 @-webkit-keyframes AnimationName {
   0% {
-    background-position: 0% 10%
+    background-position: 0% 10%;
   }
 
   50% {
-    background-position: 100% 91%
+    background-position: 100% 91%;
   }
 
   100% {
-    background-position: 0% 10%
+    background-position: 0% 10%;
   }
 }
 
 @-moz-keyframes AnimationName {
   0% {
-    background-position: 0% 10%
+    background-position: 0% 10%;
   }
 
   50% {
-    background-position: 100% 91%
+    background-position: 100% 91%;
   }
 
   100% {
-    background-position: 0% 10%
+    background-position: 0% 10%;
   }
 }
 
 @keyframes AnimationName {
   0% {
-    background-position: 0% 10%
+    background-position: 0% 10%;
   }
 
   50% {
-    background-position: 100% 91%
+    background-position: 100% 91%;
   }
 
   100% {
-    background-position: 0% 10%
+    background-position: 0% 10%;
   }
 }

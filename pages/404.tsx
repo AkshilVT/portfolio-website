@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 function FourOhFour() {
   return <div>404</div>;

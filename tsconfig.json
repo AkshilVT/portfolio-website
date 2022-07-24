@@ -15,6 +15,12 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "assets/Model.js", "components/CustomCursor.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "assets/Model.js",
+    "components/CustomCursor.js"
+  ],
   "exclude": ["node_modules"]
 }
