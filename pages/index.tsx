@@ -6,7 +6,6 @@ const Navbar = React.lazy(() => import("../components/Navbar"));
 
 const Home: NextPage = () => {
   const [active, setActive] = React.useState(0);
-  console.log(active);
   return (
     <div className="w-full bg-gray-100 h-screen">
       <div className="max-w-screen-2xl mx-auto">
