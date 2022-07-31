@@ -35,12 +35,20 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  
+h5 {
+  position: relative;
+  height: 40px;
+  animation: move 6s infinite 1s;
+  top: 0;
+}
+@media screen and (max-width: 768px) {
   h5 {
-    position: relative;
-    height: 40px;
-    top: 0;
-    animation: move 6s infinite 1s;
+    animation: moveMobile 6s infinite 1s;
+    height: 28px;
+    margin: 3px 0px;
   }
+}
   * {
     box-sizing: border-box;
   }
@@ -60,6 +68,27 @@
 
   60% {
     top: -125px;
+  }
+
+  /* 80% {
+    top: -165px;
+  } */
+}
+@keyframes moveMobile {
+  0% {
+    top: 0px;
+  }
+
+  20% {
+    top: -28px;
+  }
+
+  40% {
+    top: -56px;
+  }
+
+  60% {
+    top: -93px;
   }
 
   /* 80% {
