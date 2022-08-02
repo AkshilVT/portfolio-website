@@ -35,20 +35,20 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  
-h5 {
-  position: relative;
-  height: 40px;
-  animation: move 6s infinite 1s;
-  top: 0;
-}
-@media screen and (max-width: 768px) {
+
   h5 {
-    animation: moveMobile 6s infinite 1s;
-    height: 28px;
-    margin: 3px 0px;
+    position: relative;
+    height: 40px;
+    animation: move 6s infinite 1s;
+    top: 0;
   }
-}
+  @media screen and (max-width: 768px) {
+    h5 {
+      animation: moveMobile 6s infinite 1s;
+      height: 28px;
+      margin: 3px 0px;
+    }
+  }
   * {
     box-sizing: border-box;
   }
@@ -98,6 +98,9 @@ h5 {
 @layer components {
   .nav-link {
     @apply lg:text-xl text-lg text-black font-light px-4 py-2 cursor-none border-none text-center min-h-min;
+  }
+  .project-card {
+    @apply cursor-none;
   }
 }
 /* Tailwind -------------------------------------------- */
