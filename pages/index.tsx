@@ -1,29 +1,39 @@
-import type { NextPage } from "next";
-import React from "react";
-import Contact from "../components/Contact";
-import Experience from "../components/Experience";
-import Project from "../components/Project";
-const AboutMe = React.lazy(() => import("../components/AboutMe"));
-const CustomCursor = React.lazy(() => import("../components/CustomCursor.js"));
-const Navbar = React.lazy(() => import("../components/Navbar"));
+import type { NextPage } from 'next';
+import React, { useEffect } from 'react';
+import Contact from '../components/Contact';
+import Experience from '../components/Experience';
+import Project from '../components/Project';
+const AboutMe = React.lazy(() => import('../components/AboutMe'));
+const CustomCursor = React.lazy(() => import('../components/CustomCursor.js'));
+const Navbar = React.lazy(() => import('../components/Navbar'));
 
-const Home: NextPage = () => {
-  const [active, setActive] = React.useState(1);
+const Home: NextPage = ({ setLoading }: any) => {
+  useEffect(() => {
+    setLoading(false);
+  }, []);
+  const [active, setActive] = React.useState(0);
+  const [load0, setLoad0] = React.useState(true);
+  const [load1, setLoad1] = React.useState(true);
+  const [load2, setLoad2] = React.useState(true);
+  const [load3, setLoad3] = React.useState(true);
+
   return (
-    <div className="w-full bg-gray-100 h-screen overflow-hidden">
-      <div className="max-w-screen-2xl mx-auto">
-        <div className="hidden lg:block">
-          <CustomCursor />
+    <>
+      <div className='w-full bg-gray-100 h-screen'>
+        <div className='max-w-screen-2xl mx-auto'>
+          <div className='hidden lg:block'>
+            <CustomCursor />
+          </div>
+          <section className='w-full bg-gray-100 text-white p-5'>
+            <Navbar active={active} setActive={setActive} />
+          </section>
+          {active == 0 && <AboutMe loading={load0} setLoading={setLoad0} />}
+          {active == 1 && <Project loading={load1} setLoading={setLoad1} />}
+          {active == 2 && <Experience loading={load2} setLoading={setLoad2} />}
+          {active == 3 && <Contact loading={load3} setLoading={setLoad3} />}
         </div>
-        <section className="w-full bg-gray-100 text-white p-5">
-          <Navbar active={active} setActive={setActive} />
-        </section>
-        {active == 0 && <AboutMe />}
-        {active == 1 && <Project />}
-        {active == 2 && <Experience />}
-        {active == 3 && <Contact />}
       </div>
-    </div>
+    </>
   );
 };
 
