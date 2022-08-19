@@ -93,11 +93,11 @@ function ProjectCard({ id, setId, number, content }: any) {
           }}
           isHoverable={id == number ? false : true}
           isPressable={id == number ? false : true}
-          className="min-w-max flex flex-row bg-transparent cursor-none"
+          className="min-w-max flex flex-row bg-transparent cursor-none hover:shadow-md"
         >
           <img
             src={content.img}
-            className="max-w-[450px] max-h-[350px] z-10"
+            className="max-w-[300px] p-5 object-contain backdrop-blur-3xl h-[350px] z-10 "
             onClick={() => (id == number ? setId(0) : setId(number))}
           />
           {id == number && (

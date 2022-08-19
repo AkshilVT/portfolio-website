@@ -10,7 +10,7 @@ import ProjectCard from "./ProjectCard";
 
 const data = [
   {
-    img: "/photo.png",
+    img: "/engageML.png",
     name: "Project 1",
     description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
                   ipsa corrupti deleniti esse debitis, reiciendis numquam. Porro
@@ -47,7 +47,7 @@ const data = [
     ],
   },
   {
-    img: "/photo.png",
+    img: "/pureML.png",
     name: "Project 1",
     description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
                   ipsa corrupti deleniti esse debitis, reiciendis numquam. Porro
@@ -84,7 +84,7 @@ const data = [
     ],
   },
   {
-    img: "/photo.png",
+    img: "/Votechain.png",
     name: "Project 1",
     description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
                   ipsa corrupti deleniti esse debitis, reiciendis numquam. Porro
@@ -121,7 +121,7 @@ const data = [
     ],
   },
   {
-    img: "/photo.png",
+    img: "/TeachTech.png",
     name: "Project 1",
     description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
                   ipsa corrupti deleniti esse debitis, reiciendis numquam. Porro

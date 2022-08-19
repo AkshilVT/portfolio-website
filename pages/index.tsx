@@ -12,7 +12,7 @@ const Home: NextPage = ({ setLoading }: any) => {
   useEffect(() => {
     setLoading(false);
   }, []);
-  const [active, setActive] = React.useState(3);
+  const [active, setActive] = React.useState(0);
   const [load0, setLoad0] = React.useState(true);
   const [load1, setLoad1] = React.useState(true);
   const [load2, setLoad2] = React.useState(true);
