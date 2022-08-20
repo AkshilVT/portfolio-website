@@ -175,6 +175,10 @@ function Project({ loading, setLoading }: any) {
         </div>
       ) : (
         <div className="w-full h-full p-5 md:mt-10 flex justify-around items-center bg-gray-100 ">
+          <div className="fixed p-5 rounded-xl bottom-0 bg-white/50 z-50">
+            {" "}
+            This page is under development
+          </div>
           <section className="grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 w-full gap-5">
             {data.map((item: any, index: number) => {
               return (
