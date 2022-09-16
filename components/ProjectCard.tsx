@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import { GrClose } from "react-icons/gr";
 import { RiStackFill } from "react-icons/ri";
+import Image from "next/image";
 
 function ProjectCard({ id, setId, number, content }: any) {
   return (
@@ -98,7 +99,7 @@ function ProjectCard({ id, setId, number, content }: any) {
           <img
             src={content.img}
             className="max-w-[300px] p-5 object-contain backdrop-blur-3xl h-[350px] z-10 "
-            onClick={() => (id == number ? setId(0) : setId(number))}
+            onClick={() => (id == number ? setId(-1) : setId(number))}
           />
           {id == number && (
             <motion.div
@@ -141,11 +142,12 @@ function ProjectCard({ id, setId, number, content }: any) {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 1, type: "tween" }}
                   >
-                    <h1 className="text-xl flex items-center ">
-                      Tech Stack <RiStackFill className="ml-3" />
-                    </h1>
+                    <div className="text-xl flex items-center space-x-2">
+                      <p className="text-xl font-semibold">Links -</p>
+                      {content.link}
+                    </div>
                   </motion.div>
-                  <div className="flex mt-5  justify-around text-gray-500">
+                  <div className="flex mt-5 space-x-4 text-gray-500">
                     {content.tech.map((item: any, i: number) => {
                       return (
                         <motion.div

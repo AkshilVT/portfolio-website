@@ -3,6 +3,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import { motion } from "framer-motion";
 import { Card, Tooltip } from "@nextui-org/react";
 import { TbCopy } from "react-icons/tb";
+import { PopupButton } from "react-calendly";
 
 function Contact({ loading, setLoading }: any) {
   React.useEffect(() => {
@@ -18,7 +19,10 @@ function Contact({ loading, setLoading }: any) {
           <p className="text-xl">Loading</p>
         </div>
       ) : (
-        <div className="w-full h-full p-5 mt-10 grid grid-cols-1 lg:grid-cols-2 bg-gray-100 items-center">
+        <div
+          className="w-full h-full p-5 mt-10 grid grid-cols-1 lg:grid-cols-2 bg-gray-100 items-center"
+          id="wid"
+        >
           <motion.div
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -80,7 +84,7 @@ function Contact({ loading, setLoading }: any) {
                 </Card>
               </div>
               <div className="flex flex-row justify-between w-full p-5 items-center space-x-6">
-                <h1>Address: </h1>
+                <h1>Phone: </h1>
                 <Card
                   isHoverable
                   isPressable
@@ -143,7 +147,16 @@ function Contact({ loading, setLoading }: any) {
                 </Card>
               </div>
             </Card>
-          </motion.div>
+          </motion.div>{" "}
+          <PopupButton
+            url="https://calendly.com/your_scheduling_page"
+            /*
+             * react-calendly uses React's Portal feature (https://reactjs.org/docs/portals.html) to render the popup modal. As a result, you'll need to
+             * specify the rootElement property to ensure that the modal is inserted into the correct domNode.
+             */
+            rootElement={document.getElementById("wid")}
+            text="Click here to schedule!"
+          />
         </div>
       )}
     </>
